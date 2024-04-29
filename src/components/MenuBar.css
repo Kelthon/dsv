@@ -1,0 +1,6 @@
+header#menu-bar > ul {
+  padding-inline: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
