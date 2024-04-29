@@ -1,4 +1,5 @@
 **/.git
 **/.svn
 **/.hg
+**/.gitignore
 **/node_modules
