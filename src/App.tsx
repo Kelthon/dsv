@@ -1,13 +1,13 @@
-import Canvas from "./components/Canvas";
-import MenuBars from "./components/MenuBar";
-import ToolBar from "./components/ToolBar";
+import MenuBars from "./components/MenuBar/MenuBar";
+import ToolBar from "./components/ToolBar/ToolBar";
+import Workspace from "./components/Workspace/Workspace";
 
 function App(): JSX.Element {
   return (
     <>
       <MenuBars />
       <ToolBar />
-      <Canvas />
+      <Workspace />
     </>
   );
 }

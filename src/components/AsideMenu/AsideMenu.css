@@ -1,0 +1,6 @@
+div#aside-menu {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+}
+

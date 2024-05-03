@@ -28,12 +28,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Inter, sans-serif;
 }
 
-.interface-label {
+:is(h2, h3, p, span) {
   font-family: Inter, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
-.interface-text {
+:is(h2, h3, p, span).interface-text {
   font-family: Montserrat, sans-serif;
   font-size: 1rem;
 }
