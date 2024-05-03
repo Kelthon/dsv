@@ -12,8 +12,6 @@ import {
   RiNodeTree,
   RiTerminalBoxLine,
   RiCodeLine,
-  RiBug2Line,
-  RiFlaskLine,
   RiLayout3Line,
   RiLayoutRowLine,
   RiLayoutLine,
