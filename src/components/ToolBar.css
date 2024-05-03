@@ -1,0 +1,30 @@
+ul#tool-bar {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0.625rem 1.25rem;
+}
+
+ul#tool-bar > li > button {
+  background-color: transparent;
+  border: none;
+}
+
+ul#tool-bar > li {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+ul#tool-bar > li > button {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+ul#tool-bar > li > button:hover {
+  cursor: pointer;
+  background-color: var(--gray-color);
+}
