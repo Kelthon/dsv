@@ -1,0 +1,26 @@
+div#context-tool-bar {
+  display: flex;
+  gap: 0.625rem;
+  padding: 0.625rem 1.5rem;
+  border-inline: 1px solid var(--dark-gray-color);
+}
+
+div#context-tool-bar > ul#edit-tools {
+  list-style: none;
+  display: flex;
+  gap: 0.625rem;
+}
+
+div#context-tool-bar > ul#edit-tools > li > :is(button, input[type="color"]) {
+  border: none;
+  background-color: transparent;
+}
+
+div#context-tool-bar > ul#edit-tools > li > input[type="color"] {
+  width: 1.5rem;
+}
+
+div#context-tool-bar > ul#edit-tools > li > :is(button, input[type="color"]):hover {
+  cursor: pointer;
+  background-color: var(--gray-color);
+}
