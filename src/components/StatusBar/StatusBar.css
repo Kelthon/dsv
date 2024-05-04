@@ -1,0 +1,53 @@
+div#status-bar {
+  display: flex;
+  align-items: center;
+  padding-inline: 0.625rem;
+  border-block-start: 1px solid var(--dark-gray-color);
+}
+
+div#status-bar > div {
+  flex: 1;
+  gap: 0.625rem;
+  display: flex;
+  align-items: center;
+}
+
+div#status-bar > div[id$=-info] > div[id$=-control] > select {
+  background-color: transparent;
+  border: 1px solid var(--dark-gray-color);
+}
+
+div#status-bar > div[id$=-info] > div[id$=-control] > button,
+div#status-bar > div[id$=-info] > :is(button, div[id$=-control]) {
+  gap: 0.25rem;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+div#status-bar > div[id$=-info] > div[id$=-control] > select:hover,
+div#status-bar > div[id$=-info] > div[id$=-control] > button:hover,
+div#status-bar > div[id$=-info] > button:hover {
+  cursor: pointer;
+  background-color: var(--gray-color);
+}
+
+div#status-bar > div[id$=-info] > div[id$=-control] > button > svg,
+div#status-bar > div[id$=-info] > :is(div[id$=-control], button) > svg {
+  width: 1.25rem;
+}
+
+div#status-bar > div#animation-info {
+  flex: 2;
+}
+
+div#status-bar > div#display-info > p#display-mouse-pos {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+div#status-bar > div#display-info > p#display-mouse-pos > span {
+  min-width: 3.5rem;
+}
