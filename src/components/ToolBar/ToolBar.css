@@ -2,7 +2,7 @@ ul#tool-bar {
   display: flex;
   gap: 1.25rem;
   list-style: none;
-  padding: 0.25rem 1.25rem;
+  padding: 0.25rem 0.625rem;
   border: 1px solid var(--dark-gray-color);
 }
 

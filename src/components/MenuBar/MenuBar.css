@@ -1,5 +1,5 @@
 header#menu-bar > ul {
-  padding-inline: 1.25rem;
+  padding-inline: 0.625rem;
   padding-block-start: 0.25rem;
   list-style: none;
   display: flex;
