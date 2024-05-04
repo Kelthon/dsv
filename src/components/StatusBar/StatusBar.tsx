@@ -50,13 +50,15 @@ export default function StatusBar(): JSX.Element {
         </button>
         <div id="time-control">
           <RiTimerLine />
-          <select id="time-speed" title="select animation time speed">
-            <option value="0.5">0.5x</option>
-            <option value="1" selected>
-              1x
-            </option>
-            <option value="1.5">1.5x</option>
-            <option value="2">2x</option>
+          <select
+            id="time-speed"
+            title="select animation time speed"
+            defaultValue="1"
+          >
+            <option key="0.5" value="0.5">0.5x</option>
+            <option key="1" value="1">1x</option>
+            <option key="1.5" value="1.5">1.5x</option>
+            <option key="2" value="2">2x</option>
           </select>
         </div>
       </div>
@@ -69,15 +71,25 @@ export default function StatusBar(): JSX.Element {
           <button type="button" title="zoom in">
             <RiZoomInLine />
           </button>
-          <select id="zoom" title="select zoom level">
-            <option value="25">25%</option>
-            <option value="50">50%</option>
-            <option value="75">75%</option>
-            <option value="100" selected>
+          <select id="zoom" title="select zoom level" defaultValue="100">
+            <option key="25" value="25">
+              25%
+            </option>
+            <option key="50" value="50">
+              50%
+            </option>
+            <option key="75" value="75">
+              75%
+            </option>
+            <option key="100" value="100">
               100%
             </option>
-            <option value="150">150%</option>
-            <option value="200">200%</option>
+            <option key="150" value="150">
+              150%
+            </option>
+            <option key="200" value="200">
+              200%
+            </option>
           </select>
           <button type="button" title="zoom out">
             <RiZoomOutLine />
