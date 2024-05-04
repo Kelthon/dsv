@@ -24,3 +24,7 @@ div#context-tool-bar > ul#edit-tools > li > :is(button, input[type="color"]):hov
   cursor: pointer;
   background-color: var(--gray-color);
 }
+
+div#context-tool-bar > ul#edit-tools > li > label {
+  display: none;
+}
