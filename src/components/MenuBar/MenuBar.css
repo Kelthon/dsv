@@ -1,13 +1,13 @@
-header#menu-bar > ul {
+header#menu-bar {
   padding-inline: 0.625rem;
-  padding-block-start: 0.25rem;
+}
+header#menu-bar > ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
 }
 
 header#menu-bar > ul > li {
-  padding: 0.25rem;
+  padding: 0.25rem 0.625rem;
   border-radius: 5px;
 }
 
