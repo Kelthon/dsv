@@ -49,6 +49,7 @@ export default function ContextToolBar(): JSX.Element {
           </button>
         </li>
         <li>
+          <label htmlFor="color-pick">select a color</label>
           <input type="color" name="color-pick" id="color-pick" />
         </li>
       </ul>
