@@ -1,12 +1,12 @@
 import ContextToolBar from "../ContextToolBar/ContextToolBar";
-import Viewport from "../Viewport/Viewport";
+import DrawableArea from "../DrawableArea/DrawableArea";
 import "./Display.css";
 
 export default function Display(): JSX.Element {
   return (
     <div id="display">
       <ContextToolBar />
-      <Viewport />
+      <DrawableArea />
     </div>
   );
 }
