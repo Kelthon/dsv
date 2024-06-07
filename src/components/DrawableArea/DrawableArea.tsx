@@ -1,8 +1,16 @@
-import { useRef } from "react";
+import { DetailedHTMLProps, CanvasHTMLAttributes, forwardRef } from "react";
 import "./DrawableArea.css";
+import { useViewport } from "../../hooks/Viewport";
 
-export default function Viewport(): JSX.Element {
-  const canvas = useRef<HTMLCanvasElement>(null);
+const Canvas = forwardRef<
+  HTMLCanvasElement,
+  DetailedHTMLProps<CanvasHTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement>
+>((props, ref) => {
+  return <canvas id="drawable-area" ref={ref} {...props}></canvas>;
+});
 
-  return <canvas id="drawable-area" ref={canvas}></canvas>;
+export default function DrawableArea() {
+  const viewportRef = useViewport();
+
+  return <Canvas ref={viewportRef} />;
 }

@@ -14,8 +14,29 @@ import {
   RiZoomOutLine,
 } from "@remixicon/react";
 import "./StatusBar.css";
+import { useViewport } from "../../hooks/Viewport";
+import { useCallback, useEffect, useState } from "react";
+
+type Vector2D = {
+  x: number;
+  y: number;
+};
 
 export default function StatusBar(): JSX.Element {
+  const viewportRef = useViewport();
+  const [mousePos, setMousePos] = useState<Vector2D>({ x: 0, y: 0 });
+
+  useEffect(
+    () =>
+      viewportRef.current?.addEventListener(
+        "mousemove",
+        (event: MouseEvent) => {
+          setMousePos({ x: event.clientX, y: event.clientY });
+        },
+      ),
+    [],
+  );
+
   return (
     <div id="status-bar">
       <div id="lint-info">
@@ -55,17 +76,25 @@ export default function StatusBar(): JSX.Element {
             title="select animation time speed"
             defaultValue="1"
           >
-            <option key="0.5" value="0.5">0.5x</option>
-            <option key="1" value="1">1x</option>
-            <option key="1.5" value="1.5">1.5x</option>
-            <option key="2" value="2">2x</option>
+            <option key="0.5" value="0.5">
+              0.5x
+            </option>
+            <option key="1" value="1">
+              1x
+            </option>
+            <option key="1.5" value="1.5">
+              1.5x
+            </option>
+            <option key="2" value="2">
+              2x
+            </option>
           </select>
         </div>
       </div>
       <div id="display-info">
         <p id="display-mouse-pos">
-          <span className="axis">x: 100</span>
-          <span className="axis">y: 100</span>
+          <span className="axis">x: {mousePos.x}</span>
+          <span className="axis">y: {mousePos.y}</span>
         </p>
         <div id="zoom-control">
           <button type="button" title="zoom in">
