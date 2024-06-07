@@ -50,7 +50,7 @@ export default function ContextToolBar(): JSX.Element {
         </li>
         <li>
           <label htmlFor="color-pick">select a color</label>
-          <input type="color" name="color-pick" id="color-pick" />
+          <input type="color" name="color-pick" id="color-pick" title="color pick" />
         </li>
       </ul>
       <footer>
